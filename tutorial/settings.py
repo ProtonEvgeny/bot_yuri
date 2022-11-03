@@ -7,8 +7,6 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-URL = 'sup-estate.ru'
-
 BOT_NAME = 'yuri_spider'
 
 SPIDER_MODULES = ['tutorial.spiders']
