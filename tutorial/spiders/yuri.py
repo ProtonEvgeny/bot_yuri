@@ -1,14 +1,12 @@
 # -*- coding: utf-8 -*-
 import scrapy
-from .. import settings
 
-
-class yuri_spider(scrapy.Spider):
+class yuri_spider(scrapy.Spider, URL):
     name = 'yuri_spider1'
     
     def start_requests(self):
         urls = [
-            'https://a.pr-cy.ru/' + settings.URL + '/',
+            'https://a.pr-cy.ru/' + URL + '/',
         ]
         cookie = [
         {
