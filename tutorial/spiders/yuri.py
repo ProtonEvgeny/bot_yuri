@@ -5,7 +5,11 @@ from .. import settings
 
 class yuri_spider(scrapy.Spider):
     name = 'yuri_spider1'
-
+    
+    start_urls = [
+        'https://a.pr-cy.ru/' + settings.URL + '/',
+    ]
+    
     cookie = [
     {
         "domain": ".pr-cy.ru",
@@ -289,10 +293,6 @@ class yuri_spider(scrapy.Spider):
     ]
 
     def parse(self, response):
-      return scrapy.Request('https://a.pr-cy.ru/' + settings.URL + '/',
-                             callback=self.parse_page2,)
-
-    def parse_page2(self, response):
       for i in range(0, 5):
           yield {
               response.xpath(f'//*[@id="app"]/div[3]/div[4]/div[4]/div[4]/div/div[1]/div[2]/div/div/div/div/div/table/tbody/tr[{i+1}]/td[1]/div/text()').get(): response.xpath(f'//*[@id="app"]/div[3]/div[4]/div[4]/div[4]/div/div[1]/div[2]/div/div/div/div/div/table/tbody/tr[{i+1}]/td[2]/text()[1]').get() + '%'
