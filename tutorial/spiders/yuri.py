@@ -296,7 +296,10 @@ class yuri_spider(scrapy.Spider):
 
     
     def parse(self, response):
-      for i in range(0, 5):
-          yield {
-              response.xpath(f'//*[@id="app"]/div[3]/div[4]/div[4]/div[4]/div/div[1]/div[2]/div/div/div/div/div/table/tbody/tr[{i+1}]/td[1]/div/text()').get(): response.xpath(f'//*[@id="app"]/div[3]/div[4]/div[4]/div[4]/div/div[1]/div[2]/div/div/div/div/div/table/tbody/tr[{i+1}]/td[2]/text()[1]').get() + '%'
-          }
+        yield {
+            response.xpath(f'//*[@id="app"]/div[3]/div[4]/div[4]/div[4]/div/div[1]/div[2]/div/div/div/div/div/table/tbody/tr[1]/td[1]/div/text()').get(): response.xpath(f'//*[@id="app"]/div[3]/div[4]/div[4]/div[4]/div/div[1]/div[2]/div/div/div/div/div/table/tbody/tr[1]/td[2]/text()[1]').get() + '%'
+            response.xpath(f'//*[@id="app"]/div[3]/div[4]/div[4]/div[4]/div/div[1]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[1]/div/text()').get(): response.xpath(f'//*[@id="app"]/div[3]/div[4]/div[4]/div[4]/div/div[1]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[2]/text()[1]').get() + '%'
+            response.xpath(f'//*[@id="app"]/div[3]/div[4]/div[4]/div[4]/div/div[1]/div[2]/div/div/div/div/div/table/tbody/tr[3]/td[1]/div/text()').get(): response.xpath(f'//*[@id="app"]/div[3]/div[4]/div[4]/div[4]/div/div[1]/div[2]/div/div/div/div/div/table/tbody/tr[3]/td[2]/text()[1]').get() + '%'
+            response.xpath(f'//*[@id="app"]/div[3]/div[4]/div[4]/div[4]/div/div[1]/div[2]/div/div/div/div/div/table/tbody/tr[4]/td[1]/div/text()').get(): response.xpath(f'//*[@id="app"]/div[3]/div[4]/div[4]/div[4]/div/div[1]/div[2]/div/div/div/div/div/table/tbody/tr[4]/td[2]/text()[1]').get() + '%'
+            response.xpath(f'//*[@id="app"]/div[3]/div[4]/div[4]/div[4]/div/div[1]/div[2]/div/div/div/div/div/table/tbody/tr[5]/td[1]/div/text()').get(): response.xpath(f'//*[@id="app"]/div[3]/div[4]/div[4]/div[4]/div/div[1]/div[2]/div/div/div/div/div/table/tbody/tr[5]/td[2]/text()[1]').get() + '%'
+        }
