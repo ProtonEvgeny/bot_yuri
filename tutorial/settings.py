@@ -7,7 +7,7 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-URL = 'https://a.pr-cy.ru/sup-estate.ru/'
+URL = 'sup-estate.ru'
 
 BOT_NAME = 'yuri_spider'
 
