@@ -299,5 +299,5 @@ class yuri_spider(scrapy.Spider):
             'Ключевое слово' : response.xpath(f'//*[@id="app"]/div[3]/div[4]/div[6]/div/div[5]/div/div/div/div/div/div/div/table/tbody/tr[{i}]/td[1]/text()').get(),
             'Позиция' : response.xpath(f'//*[@id="app"]/div[3]/div[4]/div[6]/div/div[5]/div/div/div/div/div/div/div/table/tbody/tr[{i}]/td[2]/text()').get(),
             'Показов' : response.xpath(f'//*[@id="app"]/div[3]/div[4]/div[6]/div/div[5]/div/div/div/div/div/div/div/table/tbody/tr[{i}]/td[3]/text()').get().replace('&nbsp;', ' '),
-            'URL' : response.xpath(f'//*[@id="app"]/div[3]/div[4]/div[6]/div/div[5]/div/div/div/div/div/div/div/table/tbody/tr[{i}]/td[4]/text()').get()
+            'URL' : response.xpath(f'//*[@id="app"]/div[3]/div[4]/div[6]/div/div[5]/div/div/div/div/div/div/div/table/tbody/tr[{i}]/td[4]/a/text()').get()
         }
