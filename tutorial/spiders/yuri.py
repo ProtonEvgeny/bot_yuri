@@ -6,10 +6,6 @@ from .. import settings
 class yuri_spider(scrapy.Spider):
     name = 'yuri_spider1'
     
-    start_urls = [
-        'https://a.pr-cy.ru/' + settings.URL + '/',
-    ]
-    
     cookie = [
     {
         "domain": ".pr-cy.ru",
@@ -291,7 +287,15 @@ class yuri_spider(scrapy.Spider):
         "id": 20
     }
     ]
+    
+    def start_requests(self):
+        urls = [
+            'https://a.pr-cy.ru/' + settings.URL + '/',
+        ]
+        for url in urls:
+            yield scrapy.Request(url=url, callback=self.parse, cookies=cookie)
 
+    
     def parse(self, response):
       for i in range(0, 5):
           yield {
