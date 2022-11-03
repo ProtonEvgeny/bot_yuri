@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
-from . import settings
+from .. import settings
 
 
 class yuri_spider(scrapy.Spider):
