@@ -2,7 +2,7 @@
 import scrapy
 
 class yuri_spider(scrapy.Spider):
-    name = 'yuri_spider1'
+    name = 'traffic_source'
     
     def start_requests(self):
         urls = [
