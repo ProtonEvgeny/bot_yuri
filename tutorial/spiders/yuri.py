@@ -5,9 +5,6 @@ from .. import settings
 
 class yuri_spider(scrapy.Spider):
     name = 'yuri_spider1'
-    start_urls = [
-        'https://a.pr-cy.ru/' + settings.URL + '/',
-    ]
 
     cookie = [
     {
